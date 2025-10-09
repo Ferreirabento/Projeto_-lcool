@@ -22,15 +22,9 @@ CREATE TABLE paises (
     id_paises int PRIMARY key AUTO_INCREMENT not null,
     id_alcoholic int,
     paises TEXT,
-    codigo_paises varchar(2),
+    codigo_paises varchar (5),
     Foreign key (id_alcoholic) references dados_alcolicos(id_alcoholic)
 );
 
---aqui ainda falta por os outros dados com distinção para que poss afazer uma contagem depois--
-INSERT into paises (paises)
-select DISTINCT paises from dados_alcolicos;
-
-SELECT * from paises;
-
-DROP TABLE paises;
+--tem um arquivo que vou fazer com que o ids fiquem parecido, tranformar em csv e depois por na tabela paises--
 
